@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>card</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- font -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript">
+var width=100;
+var difference=2;
+var intervalID=0;
+
+function increase()
+{
+clearInterval(intervalID);
+intervalID=setInterval(expand,2);
+}
+
+function decrease()
+{
+clearInterval(intervalID);
+intervalID=setInterval(shrink,2);
+}
+
+function expand()
+{
+if(width<300)
+{
+width=width+difference;
+document.getElementById("img1").style.width=width;
+console.log(width);
+}
+else
+{
+clearInterval(intervalID);
+}
+}
+
+function shrink()
+{
+if(width>100)
+{
+width=width-difference;
+document.getElementById("img1").style.width=width;
+console.log(width);
+}
+else
+{
+clearInterval(intervalID);
+}
+}
+
+</script>
+</head>
+
+<body class="bg-secondary">
+
+
+<body>
+
+<div class="d-block bg-light ">
+<h2><b>Some website are-</b></h2>
+<a href="https://webdesignercrazyworld.github.io/icoder/index.html">website 1 </a>
+<a href="https://webdesignercrazyworld.github.io/icode/index.html">website 2</a>
+<a href="https://webdesignercrazyworld.github.io/icoding/index.html">website 3</a>
+<a href="https://webdesignercrazyworld.github.io/icodin/index.html">website 4</a>
+<a href="https://webdesignercrazyworld.github.io/icod/index.html">website 5</a>
+<a href="https://webdesignercrazyworld.github.io/ico/index.html">website 6</a>
+<a href="https://webdesignercrazyworld.github.io/ic/index.html">website 7</a>
+
+</div>
+
+<div class="container col-lg-4">
+
+<div class="card-deck" style="width:200px; height:550px;">
+
+<img  id="img1" onmouseover="increase()" onmouseout="decrease()"
+src="21.jpg" class="card-img rounded-circle" height="250;">
+
+<div class="card-body">
+<h4 class="card-title">Ankit</h4>
+<p class="card-text">welcome, To my website ... Plz like share and subscribe my youtube channel.</p>
+<a href="#" class="btn btn-primary">share</a>
+</div>
+</div>
+</div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
